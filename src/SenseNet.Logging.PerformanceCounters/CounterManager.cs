@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using SenseNet.ContentRepository.Storage;
 using SenseNet.Diagnostics;
 using PerfCountersConfig = SenseNet.Logging.PerformanceCounters.Configuration;
 
 namespace SenseNet.ContentRepository
 {
     [SuppressMessage("ReSharper", "InconsistentNaming")]
-    public class CounterManager
+    public class CounterManager : ISnService
     {
         private static CounterManager _current;
         private static readonly object CounterLockObject = new object();
@@ -107,12 +108,7 @@ namespace SenseNet.ContentRepository
 
             Current.GetCounter(counterName)?.SetRawValue(value);
         }
-
-        public static void Start()
-        {
-            var unused = Current;
-        }
-
+        
         public static float GetCPUUsage()
         {
             return Current.GetCPUUsageInternal();
@@ -173,6 +169,18 @@ namespace SenseNet.ContentRepository
                 _counters = new SenseNetPerformanceCounter[0];
             }
         }
+
+        #region ISnService implementation
+        bool ISnService.Start()
+        {
+            var unused = Current;
+            return true;
+        }
+        void ISnService.Shutdown()
+        {
+            // do nothing
+        }
+        #endregion
 
         // ================================================================================= Event handlers
 
