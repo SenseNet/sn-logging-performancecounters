@@ -8,7 +8,7 @@
     <Product>sensenet PerformanceCounters</Product>
     <Description>Performance counter API for the sensenet platform.</Description>
     <Copyright>Copyright © Sense/Net Inc.</Copyright>
-    <PackageLicenseUrl>https://github.com/SenseNet/sensenet/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/SenseNet/sn-logging-performancecounters/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/SenseNet/sensenet</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/SenseNet/sn-resources/master/images/sn-icon/sensenet-icon-64.png</PackageIconUrl>
     <PackageTags>sensenet performancecounters</PackageTags>

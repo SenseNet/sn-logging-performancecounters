@@ -16,12 +16,29 @@ namespace SenseNet.ContentRepository
         private static readonly object CounterLockObject = new object();
         private static readonly string PERFORMANCECOUNTER_CATEGORYNAME = "SenseNet";
 
-        private static readonly CounterCreationData[] DefaultCounters = {
-                                                                                 new CounterCreationData { CounterType = PerformanceCounterType.NumberOfItems32, CounterName = "GapSize" },
-                                                                                 new CounterCreationData { CounterType = PerformanceCounterType.NumberOfItems32, CounterName = "IncomingMessages" },
-                                                                                 new CounterCreationData { CounterType = PerformanceCounterType.NumberOfItems32, CounterName = "TotalMessagesToProcess" },
-                                                                                 new CounterCreationData { CounterType = PerformanceCounterType.NumberOfItems32, CounterName = "DelayingRequests" }
-                                                                             };
+        private static readonly CounterCreationData[] DefaultCounters =
+        {
+            new CounterCreationData
+            {
+                CounterType = PerformanceCounterType.NumberOfItems32,
+                CounterName = "GapSize"
+            },
+            new CounterCreationData
+            {
+                CounterType = PerformanceCounterType.NumberOfItems32,
+                CounterName = "IncomingMessages"
+            },
+            new CounterCreationData
+            {
+                CounterType = PerformanceCounterType.NumberOfItems32,
+                CounterName = "TotalMessagesToProcess"
+            },
+            new CounterCreationData
+            {
+                CounterType = PerformanceCounterType.NumberOfItems32,
+                CounterName = "DelayingRequests"
+            }
+        };
 
         private Dictionary<string, bool> _invalidCounters;
 
