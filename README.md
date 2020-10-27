@@ -7,4 +7,10 @@ This package lets you register custom performance counters and access basic envi
 
 > This is a legacy package for supporting older installations of sensenet. New projects should take a more modern approach. 
 > 
-> Please note that even if you install this package, the system does not manage the [built-in performance counters](http://wiki.sensenet.com/Performance_Counters), that feature has been removed. Custom performance counters and the necessary API for incrementing/decrementing them is still supported.
+> Please note that even if you install this package, the system does not manage the built-in performance counters, that feature has been removed. Custom performance counters and the necessary API for incrementing/decrementing them is still supported.
+
+# sensenet as a service (SNaaS) - use sensenet from the cloud
+
+For a monthly subscription fee, we store all your content and data, relieving you of all maintenance-related tasks and installation, ensuring easy onboarding, easy updates, and patches.
+
+https://www.sensenet.com/pricing
